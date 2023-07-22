@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getDatabase } from "firebase/database";
+import { getDatabase, ref, child, get } from "firebase/database";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,21 +15,26 @@ const firebaseConfig = {
   messagingSenderId: "178921788338",
   appId: "1:178921788338:web:937873e8912d8fa895caab",
   measurementId: "G-2RV99QX0XP",
-  databaseURL: "https://DATABASE_NAME.firebaseio.com",
+  databaseURL:
+    "https://personalweb-8b9f0-default-rtdb.asia-southeast1.firebasedatabase.app",
 };
 
-export default function App() {
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  // Initialize Realtime Database and get a reference to the service
-  const database = getDatabase(app);
-  const analytics = getAnalytics(app);
-  return (
-    <>
-      <h1 className="text-3xl font-bold">React starter</h1>
-      <h3 className="text-2xl font-light">
-        Vite, React, TailwindCSS, Prettier + ESLint, Firebase Hosting+RealtimeDatabase
-      </h3>
-    </>
-  );
+const app = initializeApp(firebaseConfig);
+// Initialize Realtime Database and get a reference to the servic
+
+const dbRef = ref(getDatabase(app));
+
+export default function getAllPortofolio() {
+  get(child(dbRef, `portofolio`))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        return snapshot.val();
+      } else {
+        return "No data available"
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      return error;
+    });
 }
