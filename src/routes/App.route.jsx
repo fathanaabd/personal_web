@@ -1,25 +1,21 @@
-import { Link, Outlet, useLoaderData } from "react-router-dom";
-import getAllPortofolio from "../data/firebaseConnector";
+import { Link, Outlet } from "react-router-dom";
+import IntroNameHero from "../components/IntroNameHero";
+import ImAn from "../components/ImAn";
 
-export async function loader(){
-  const p = await getAllPortofolio
-  return {p}
-}
+const data = {
+  firstname: "Fathan",
+  lastname: "Akbar",
+};
 
 export default function App() {
-  const {porto} = useLoaderData();
   return (
     <>
-      <h1 className="text-3xl font-bold">React starter</h1>
-      <h3 className="text-2xl font-light">
-        Vite, React, TailwindCSS, Prettier + ESLint, Firebase
-        Hosting+RealtimeDatabase
-      </h3>
-      <Link to={"/portos/1"}>My Projects</Link>
-      <nav className="text-2xl">
-        {porto}
-      </nav>
-      <Outlet />
+      <div className="bg-hex_FFE090 px-6">
+        <IntroNameHero />
+      </div>
+      <div className="bg-hex_9A6F00">
+        <ImAn />
+      </div>
     </>
   );
 }

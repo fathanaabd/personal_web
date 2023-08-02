@@ -30,7 +30,7 @@ export default function getAllPortofolio() {
       if (snapshot.exists()) {
         return snapshot.val();
       } else {
-        return "No data available"
+        return "No data available";
       }
     })
     .catch((error) => {

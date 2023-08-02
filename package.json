@@ -3,6 +3,7 @@
   "description": "React, Firebase, TailwindCSS, Prettier, ESLint",
   "private": true,
   "version": "0.0.0",
+  "proxy": "http://localhost:5173/",
   "type": "module",
   "scripts": {
     "dev": "vite",
