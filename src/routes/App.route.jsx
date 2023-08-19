@@ -6,7 +6,7 @@ import ProjectsHero from "../components/ProjectsHero";
 import { Link } from "react-router-dom";
 import EmployeeExp from "../components/EmployeeExp";
 import Footer from "../components/Footer";
-import R_arr from "../assets/right-arrow-svgrepo-com.svg"
+import R_arr from "../assets/right-arrow-svgrepo-com.svg";
 
 export default function App() {
   const is_DesktopLaptop = useMediaQuery({
@@ -16,31 +16,19 @@ export default function App() {
   return (
     <>
       {is_DesktopLaptop ? (
-        <div className="flex flex-row justify-around ">
-          <div className="bg-hex_FFE090 w-full">
+        <div className="flex flex-row">
+          <div className="w-full">
             <IntroNameHero />
           </div>
-          <div className="flex flex-col w-full">
-            <div className="bg-gray-700">
-              <ImAn />
-            </div>
-            <div className="bg-gray-600">
-              <SkillsHero />
-            </div>
+          <div className=" w-full">
+            <SkillsHero />
           </div>
         </div>
       ) : (
-        <div className="flex flex-col justify-around ">
-          <div className="bg-hex_FFE090 w-full ">
+        <div className="">
+          <div className="flex flex-col gap-2">
             <IntroNameHero />
-          </div>
-          <div className="flex flex-col w-full">
-            <div className="bg-gray-500 ">
-              <ImAn />
-            </div>
-            <div className="bg-gray-600">
-              <SkillsHero />
-            </div>
+            <SkillsHero />
           </div>
         </div>
       )}
@@ -88,10 +76,16 @@ export default function App() {
           <div className="container mx-auto max-w-2xl">
             <div className="text-left text-black font-grenzeL300 leading-relaxed tracking-normal antialiased font-bold text-[20px] pt-4">
               <Link to={"#"}>
-              <div className="flex flex-row gap-3 opacity-100 hover:opacity-80">
-                <span className="text-[22px] antialiased w-auto h-auto">list of project</span>
-                <img className="w-3.5  h-auto " src={R_arr} alt="Right Arrow"/>
-              </div>
+                <div className="flex flex-row gap-3 opacity-100 hover:opacity-80">
+                  <span className="text-[22px] antialiased w-auto h-auto">
+                    list of project
+                  </span>
+                  <img
+                    className="w-3.5  h-auto "
+                    src={R_arr}
+                    alt="Right Arrow"
+                  />
+                </div>
               </Link>
             </div>
           </div>
@@ -209,7 +203,7 @@ export default function App() {
           </div>
         </div>
       )}
-      <Footer/>
+      <Footer />
     </>
   );
 }
