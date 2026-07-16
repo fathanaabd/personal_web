@@ -8,7 +8,7 @@ export default function ImAn() {
               im a
             </h1>
             <h1 className="text-3xl font-light leading-[38.80px] font-gelgooR400">
-              software developer
+              software developers
             </h1>
           </div>
         </div>
