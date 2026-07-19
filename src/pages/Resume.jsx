@@ -1,21 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Resume = () => {
+  React.useEffect(() => {
+    document.title = "Resume | Fathan Akbar Abdurachman";
+  }, []);
+
   return (
     <article>
+        {/* Navigation Section */}
+        <nav className="mb-8 print:hidden">
+          <Link to="/" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded font-medium">
+            &larr; Back to Home
+          </Link>
+        </nav>
+
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-2xl font-bold mb-1">Fathan Akbar Abdurachman</h1>
           <p className="text-base mb-1">Software Engineer</p>
           <p className="text-sm">
-            Bandung, Indonesia; <a href="mailto:fathan.aa.01@gmail.com" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathan.aa.01@gmail.com</a>; +62 896 9899 4508; <a href="https://fathanaabd.web.app" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathanaabd.web.app</a>
+            Bandung, Indonesia; <a href="mailto:fathan.aa.01@gmail.com" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathan.aa.01@gmail.com</a>; <a href="tel:+6289698994508" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">+62 896 9899 4508</a>; <a href="https://fathanaabd.web.app" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathanaabd.web.app</a>
           </p>
         </header>
 
         {/* Professional Summary */}
         <section className="mb-8">
           <h2 className="text-lg font-bold mb-2">Professional Summary</h2>
-          <p className="text-sm text-justify">
+          <p className="text-sm text-left">
             With over 3+ years working experience in software products, I successfully delivered various innovations of product development aligned with functional requirements. Proven by streamlining development workflows and significantly improving overall operations.
           </p>
         </section>
@@ -30,7 +42,7 @@ const Resume = () => {
               <span className="text-sm">Jun 2022 - Aug 2023</span>
             </div>
             <p className="text-sm mb-2">Software Engineering</p>
-            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-justify">
+            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-left">
               <li>Developed a web application to monitor environment conditions around avocado yard, acquiring real-time data to visualize it via browser.</li>
               <li>Developed firmware on miniaturized CNC machines to test durability of lipstick after being used several times, allowing to measure the quality by calculating swipe cycle of the lipstick.</li>
             </ul>
@@ -42,7 +54,7 @@ const Resume = () => {
               <span className="text-sm">Nov 2023 - Feb 2026</span>
             </div>
             <p className="text-sm mb-2">Electrical Engineering</p>
-            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-justify">
+            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-left">
               <li>Managed a bill of material of electronic requirement for accessories equipment in modular operating theatre, ensuring the costs are within the specified budget.</li>
               <li>Collaborated with R&D department to develop a firmware automation program for the prototype of refrigerant control system to maintain below zero temperature inside the mortuary chamber.</li>
               <li>Designed firmware for pass boxes to implement an interlocking system in modular operating theatres.</li>
@@ -55,7 +67,7 @@ const Resume = () => {
               <span className="text-sm">Mar 2026 - Jul 2026</span>
             </div>
             <p className="text-sm mb-2">IT Programmer</p>
-            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-justify">
+            <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-left">
               <li>Developed a web application that empowers sales teams to generate accurate cost estimations for cleanroom and surgical room projects, reducing manual calculation time significantly.</li>
             </ul>
           </div>

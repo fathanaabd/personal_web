@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /resume
+
+# Allow search indexing AI bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://fathanaabd.web.app/sitemap.xml
