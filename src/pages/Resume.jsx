@@ -1,16 +1,14 @@
 import React from 'react';
 
-const About = () => {
+const Resume = () => {
   return (
-    <div className="py-12 px-6 sm:px-12 md:px-20 text-sm">
-      <div className="max-w-3xl mx-auto">
-
+    <article>
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-2xl font-bold mb-1">Fathan Akbar Abdurachman</h1>
           <p className="text-base mb-1">Software Engineer</p>
           <p className="text-sm">
-            Bandung, Indonesia; <a href="mailto:fathan.aa.01@gmail.com" className="text-blue-600 hover:underline">fathan.aa.01@gmail.com</a>; +62 896 9899 4508; <a href="https://fathanaabd.web.app" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">fathanaabd.web.app</a>
+            Bandung, Indonesia; <a href="mailto:fathan.aa.01@gmail.com" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathan.aa.01@gmail.com</a>; +62 896 9899 4508; <a href="https://fathanaabd.web.app" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline focus:outline-none focus:ring-1 focus:ring-blue-600 rounded">fathanaabd.web.app</a>
           </p>
         </header>
 
@@ -100,9 +98,8 @@ const About = () => {
 
 
 
-      </div>
-    </div>
+    </article>
   );
 };
 
-export default About;
+export default Resume;

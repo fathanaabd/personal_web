@@ -9,4 +9,13 @@
   body {
     @apply bg-[#fcf9ee] text-black antialiased font-sans leading-tight tracking-normal selection:bg-blue-200;
   }
+
+  /* Hide scrollbar globally */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  body, html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
