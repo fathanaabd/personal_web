@@ -1,16 +1,53 @@
-# React + Vite
+# Fathan Akbar A. - Personal Portfolio & CV
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A minimalist, document-styled personal portfolio and digital Curriculum Vitae (CV) for Fathan Akbar Abdurachman, built with modern web technologies. 
 
-Currently, two official plugins are available:
+The application is designed to simulate a professional physical A4 document (CV/Resume), focusing entirely on high readability, structured data, and a clean monochromatic aesthetic without any distractive UI elements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Site
+[https://fathanaabd.web.app](https://fathanaabd.web.app)
 
-## React Compiler
+## 🛠 Tech Stack
+- **Frontend Framework:** React (via Vite)
+- **Styling:** TailwindCSS (Vanilla configurations)
+- **Typography:** Ubuntu (Google Fonts)
+- **Deployment:** Firebase Hosting
+- **CI/CD:** GitHub Actions (Automated Deployment on `main` branch)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Core Design Philosophy
+- **Minimalist & Monochromatic:** Pure white background (`#ffffff`) with deep black text.
+- **Document-Style Layout:** A maximum container width (`max-w-3xl`) replicating the width of an A4 physical paper on desktop screens.
+- **Compact Readability:** Reduced font sizes (`text-sm`), tight line-heights (`leading-tight`), and normal character tracking to present dense information neatly.
+- **No Fancy UI Elements:** No dark mode, no gradients, no glassmorphism, no drop shadows, and no micro-animations. Links are represented as simple standard blue text.
 
-## Expanding the Oxlint configuration
+## 🚀 Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## ☁️ Deployment
+This project is configured to be deployed on **Firebase Hosting**. 
+Any push to the `main` branch will automatically trigger a production build and deploy it live via GitHub Actions (configured inside `.github/workflows/firebase-hosting-merge.yml`).
+
+To deploy manually via Firebase CLI:
+```bash
+npm run build
+npx firebase-tools@latest deploy --only hosting
+```
+
+## 🤖 AI Agent Syncing
+This repository is configured with AI Agent skills (stored in `.agents/`). The agent is programmed to read updates from the Master CV Google Docs reference and automatically synchronize the `src/pages/About.jsx` page whenever asked to "Update CV Data".
