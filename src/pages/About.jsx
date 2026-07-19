@@ -2,9 +2,9 @@ import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white text-black py-12 px-6 sm:px-12 md:px-20 font-sans selection:bg-blue-200 text-sm">
-      <div className="max-w-3xl mx-auto bg-white">
-        
+    <div className="py-12 px-6 sm:px-12 md:px-20 text-sm">
+      <div className="max-w-3xl mx-auto">
+
         {/* Header Section */}
         <header className="mb-8">
           <h1 className="text-2xl font-bold mb-1">Fathan Akbar Abdurachman</h1>
@@ -25,7 +25,7 @@ const About = () => {
         {/* Work Experiences */}
         <section className="mb-8">
           <h2 className="text-lg font-bold mb-4">Work Experiences</h2>
-          
+
           <div className="mb-6">
             <div className="flex justify-between items-baseline mb-1">
               <h3 className="text-sm font-normal">PT. Malomo Teknologi Indonesia</h3>

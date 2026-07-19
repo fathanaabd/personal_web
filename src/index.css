@@ -7,6 +7,6 @@
 
 @layer base {
   body {
-    @apply bg-white text-black antialiased font-sans leading-tight tracking-normal selection:bg-blue-200;
+    @apply bg-[#fcf9ee] text-black antialiased font-sans leading-tight tracking-normal selection:bg-blue-200;
   }
 }
