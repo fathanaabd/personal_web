@@ -43,7 +43,7 @@ const Resume = () => {
             </div>
             <p className="text-sm mb-2">Software Engineering</p>
             <ul className="list-disc list-outside ml-5 space-y-1 text-sm text-left">
-              <li>Developed a web application to monitor environment conditions around avocado yard, acquiring real-time data to visualize it via browser.</li>
+              <li>Developed a web application to monitor environment conditions around avocado farm, acquiring real-time data to visualize it via browser.</li>
               <li>Developed firmware on miniaturized CNC machines to test durability of lipstick after being used several times, allowing to measure the quality by calculating swipe cycle of the lipstick.</li>
             </ul>
           </div>
@@ -91,9 +91,8 @@ const Resume = () => {
           <ul className="list-disc list-outside ml-5 space-y-1 text-sm">
             <li><span className="font-bold">Languages:</span> C/C++, Python</li>
             <li><span className="font-bold">Hardware Microcontroller:</span> ESP32, STM32, Arduino (Atmel)</li>
-            <li><span className="font-bold">Cloud Services:</span> Firebase, Google Cloud</li>
             <li><span className="font-bold">Engineering Expertise:</span> Embedded Systems, Firmware Development, Web Application Development with Flask</li>
-            <li><span className="font-bold">Version Control:</span> Git, GitHub Actions</li>
+            <li><span className="font-bold">Version Control & Workflow:</span> Git, GitHub Actions</li>
             <li><span className="font-bold">Coding Practices:</span> Focus on clean and maintainable code, AI-Assisted Software Development</li>
           </ul>
         </section>

@@ -165,7 +165,7 @@ This action plan outlines prioritized recommendations to resolve the SEO issues 
   
   ### PT. Malomo Teknologi Indonesia (Software Engineering)
   *June 2022 - August 2023*
-  - Developed real-time avocado yard monitoring web application.
+  - Developed real-time avocado farm monitoring web application.
   - Programmed durability test CNC firmware for cosmetics.
   
   ## Technical Skills

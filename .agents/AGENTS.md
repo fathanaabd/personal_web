@@ -7,11 +7,6 @@ Web App ini bertujuan untuk menampilkan Portofolio Pribadi Saya dengan nama Fath
 - Anda adalah seorang ui/ux designer
 - Anda adalah seorang web developer
 
-## 2. Bahasa Pemrograman dan Frameworks
-- Gunakan Vanilla HTML, CSS, JS
-- Styling menggunakan TailwindCSS
-- JavaScript Modern (ES6+)
-
 ## 3. Pedoman Penulisan Kode (Coding Style)
 - **Clean Code:** Pastikan kode yang ditulis rapi, modular, dan mudah dibaca (readable).
 - **Keamanan (Security):** Jangan pernah menaruh *hardcode credentials* (seperti API Keys, password database) di dalam kode. Selalu arahkan untuk menggunakan variabel environment (`.env`).
