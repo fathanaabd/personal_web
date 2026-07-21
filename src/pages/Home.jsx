@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SpotlightCard from '../components/SpotlightCard';
 import Grainient from '../components/Grainient';
 const Home = () => {
   React.useEffect(() => {
-    document.title = "Fathan Akbar Abdurachman - Software Engineer Portfolio";
+    document.title = "backyard of @fathanaabd";
   }, []);
 
   return (
@@ -14,37 +13,32 @@ const Home = () => {
         <Grainient
           grainAmount={0.02}
           grainAnimated={false}
-          timeSpeed={0.3}
+          timeSpeed={0.05}
           warpSpeed={0.5}
         />
       </div>
 
-      <section className="flex flex-col items-start justify-center min-h-[60vh] relative z-10 text-white">
-        <SpotlightCard className="w-full" spotlightColor="rgba(255, 255, 255, 0.2)">
-          <h1 className="text-3xl font-bold mb-4">Hello, I'm Fathan Akbar A.</h1>
-          <p className="text-base mb-4 max-w-xl text-left">
-            Welcome to my personal backyard on the internet. I am a Software Engineer based in Bandung, Indonesia, with a strong background in embedded systems, firmware development, and web applications.
-          </p>
-          <p className="text-sm mb-6 max-w-xl text-left text-gray-300">
-            Over the past 3+ years, I have successfully engineered and delivered software products across various industrial applications. My work spans from firmware automation on miniaturized CNC systems and refrigeration controllers to full-stack web solutions for real-time sensor visualization and project cost estimation.
-          </p>
+      <section className="ml-10 mt-10 items-left justify-center min-h-[60vh] relative z-10 text-black">
+        <h1 className="text-3xl font-bold mb-4">Welcome to my backyard.</h1>
+        <p className="text-base mb-4 max-w-xl text-left">
+          Hi, I'm <strong>Fathan Akbar A.</strong>, a Software Engineer based in Bandung, Indonesia. This is my personal corner on the internet.
+        </p>
+        <p className="text-sm mb-6 max-w-xl text-left text-gray-700">
+          I built this site to introduce myself, document my journey, and share what I'm working on. Here, you will find a collection of my past projects, technical articles, and various explorations in software engineering—spanning from full-stack web applications to embedded systems.
+        </p>
 
-          <div className="mb-8 text-left max-w-xl">
-            <h2 className="text-base font-bold mb-3 text-white">Core Competencies:</h2>
-            <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
-              <li><strong>Engineering Expertise:</strong> Embedded Systems, Firmware Development, Web Application Development with Flask.</li>
-              <li><strong>Technical Skills:</strong> C/C++, Python, Microcontrollers (ESP32, STM32, Arduino), Git, AI-Assisted Development.</li>
-              <li><strong>Soft Skills:</strong> Computational Thinking, Critical Problem-Solving, Effective Workplace Communication, Task Management.</li>
-            </ul>
-          </div>
+        <div className="mb-8 text-left max-w-xl">
+          <p className="text-sm text-gray-700 mb-4">
+            Feel free to look around and explore. If you're interested in my professional background, you can check out my digital resume below.
+          </p>
+        </div>
 
-          <Link
-            to="/resume"
-            className="inline-block border border-white px-6 py-2 font-bold hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 transition-colors duration-200"
-          >
-            View Resume
-          </Link>
-        </SpotlightCard>
+        <Link
+          to="/resume"
+          className="inline-block border border-black px-6 py-2 font-bold hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors duration-200"
+        >
+          Read My Resume
+        </Link>
       </section>
     </>
   );
