@@ -49,13 +49,14 @@ void mainImage(out vec4 o, vec2 C){
   float t=iTime*uTimeSpeed;
   vec2 uv=C/iResolution.xy;
   float ratio=iResolution.x/iResolution.y;
-  vec2 tuv=uv-0.5+uCenterOffset;
+  vec2 tuv=uv-0.5;
+  tuv.x*=max(1.0,ratio);
+  tuv.y*=max(1.0,1.0/ratio);
+  tuv+=uCenterOffset;
   tuv/=max(uZoom,0.001);
 
   float degree=noise(vec2(t*0.1,tuv.x*tuv.y)*uNoiseScale);
-  tuv.y*=1.0/ratio;
   tuv*=Rot(radians((degree-0.5)*uRotationAmount+180.0));
-  tuv.y*=ratio;
 
   float frequency=uWarpFrequency;
   float ws=max(uWarpStrength,0.001);
@@ -79,7 +80,10 @@ void mainImage(out vec4 o, vec2 C){
   vec3 layer2=mix(colOrg,colLav,S(edge0,edge1,blendX));
   vec3 col=mix(layer1,layer2,S(v0,v1,tuv.y));
 
-  vec2 grainUv=uv*max(uGrainScale,0.001);
+  vec2 grainUv=uv;
+  grainUv.x*=max(1.0,ratio);
+  grainUv.y*=max(1.0,1.0/ratio);
+  grainUv*=max(uGrainScale,0.001);
   if(uGrainAnimated>0.5){grainUv+=vec2(iTime*0.05);} 
   float grain=fract(sin(dot(grainUv,vec2(12.9898,78.233)))*43758.5453);
   col+=(grain-0.5)*uGrainAmount;

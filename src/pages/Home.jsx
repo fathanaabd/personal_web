@@ -32,9 +32,9 @@ const Home = () => {
           <div className="mb-8 text-left max-w-xl">
             <h2 className="text-base font-bold mb-3 text-white">Core Competencies:</h2>
             <ul className="list-disc list-inside space-y-2 text-sm text-gray-300">
-              <li><strong>Embedded Systems:</strong> Custom firmware development for microcontrollers (ESP32, STM32, Arduino).</li>
-              <li><strong>Web Engineering:</strong> Modern web application development using React, Flask, and cloud services (Firebase, Google Cloud).</li>
-              <li><strong>Automation & Control:</strong> Implementing interlocking controls, sensor telemetry, and automation algorithms.</li>
+              <li><strong>Engineering Expertise:</strong> Embedded Systems, Firmware Development, Web Application Development with Flask.</li>
+              <li><strong>Technical Skills:</strong> C/C++, Python, Microcontrollers (ESP32, STM32, Arduino), Git, AI-Assisted Development.</li>
+              <li><strong>Soft Skills:</strong> Computational Thinking, Critical Problem-Solving, Effective Workplace Communication, Task Management.</li>
             </ul>
           </div>
 
